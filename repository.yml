@@ -1,0 +1,216 @@
+#
+# This file should not be processed directly
+# Please use the ASF::SVN and ASF::Git APIs instead
+#
+---
+:git:
+
+  # For ruby2js demo only (see www/ruby2js.cgi)
+  ruby2js:
+    url: https://github.com/rubys/ruby2js.git
+    depth: 1
+
+# N.B. the names in the section below should not be changed as they are used by Ruby
+# Entries that are not intended to have local workspaces are indicated by: 'depth: skip'
+# Such entries are for url lookup only, e.g. Bills
+
+# names that are list only have 'depth: delete'
+# This is decoupled from list to allow a gradual changeover
+
+# The url: entries below are relative to the @base value defined in ASF::SVN
+# This defaults to https://svn.apache.org/repos/
+
+:svn:
+
+  Bills:
+    url: private/financials/Bills
+    depth: skip
+
+
+  Meetings:
+    url: private/foundation/Meetings
+
+  acreq: # for account requests
+    url: infra/infrastructure/trunk/acreq
+    depth: skip
+
+  apachecon:
+    url: private/foundation/ApacheCon
+    depth: empty
+    files:
+      - apacheconhistory.csv
+
+  apmail_bin:
+    url: infra/infrastructure/apmail/trunk/bin
+    depth: empty
+    files:
+      - mail_list_autosub.yml
+
+  attic-xdocs:
+    url: asf/attic/site/xdocs/projects
+    depth: delete
+    list: true
+
+  board:
+    url: private/committers/board
+    depth: empty
+    files:
+      - calendar.txt
+      - committee-info.txt
+      - committee-info.yaml
+
+  brandlist:
+    url: private/foundation/Brand
+    depth: empty
+    files:
+      - docket.json
+
+  cclas:
+    url: private/documents/cclas
+    depth: skip
+
+  comdev-foundation:
+    url: asf/comdev/projects.apache.org/trunk/site/json/foundation
+    depth: empty
+    files:
+      - projects.json
+
+  comdevtalks:
+    url: asf/comdev/site/trunk/content/speakers/talks
+    depth: files
+
+  committers:
+    url: private/committers
+    depth: skip
+
+  conflict-of-interest:
+    url: private/documents/conflict-of-interest
+    depth: skip
+
+  distrel:
+    url: https://dist.apache.org/repos/dist/release
+    depth: delete
+    list: true
+
+  distrelinc:
+    url: https://dist.apache.org/repos/dist/release/incubator
+    depth: delete
+    list: true
+
+  distdevinc:
+    url: https://dist.apache.org/repos/dist/dev/incubator
+    depth: delete
+    list: true
+
+  emeritus:
+    url: private/documents/emeritus
+    depth: delete
+    list: true
+
+  emeritus-involuntary:
+    url: private/documents
+    depth: empty
+    files:
+      - emeritus-involuntary.yml
+
+  emeritus-reinstated:
+    url: private/documents/emeritus-reinstated
+    depth: delete
+    list: true
+
+  emeritus-requests-received: # listing has dates for age checks
+    url: private/documents/emeritus-requests-received
+    depth: delete
+    list: true
+    dates: true
+
+  emeritus-requests-rescinded:
+    url: private/documents/emeritus-requests-rescinded
+    depth: delete
+    list: true
+
+  foundation:
+    url: private/foundation
+    depth: empty
+    files:
+      - members.txt
+      - potential-member-watch-list.txt
+
+  foundation_board: # The checkout is needed by the WSS service and collate_minutes
+    url: private/foundation/board
+
+  foundation_mentors:
+    url: private/foundation/mentors
+
+  grants:
+    url: private/documents/grants
+    depth: skip
+
+  iclas:
+    url: private/documents/iclas
+    depth: skip
+
+  incubator-content:
+    url: asf/incubator/public/trunk/content
+    depth: empty
+    files:
+      - podlings.xml
+
+  incubator-podlings:
+    url: asf/incubator/public/trunk/content/podlings
+    depth: files
+
+  # for Secretary use only
+  member_apps:
+    url: private/documents/member_apps
+    depth: skip
+
+  minutes:
+    url: asf/infrastructure/site/trunk/content/foundation/records/minutes
+
+  officers:
+    url: private/foundation/officers
+    depth: empty
+    files:
+      - iclas.txt
+      - reserved-ids.yml
+
+  officers_historic:
+    url: private/foundation/officers/historic
+    depth: empty
+    files:
+      - committers.json
+
+  officers_surveys:
+    url: private/foundation/officers/surveys
+
+  personnel-duties:
+    url: private/foundation/officers/personnel-duties
+    depth: files
+
+# for access to badrcptto files:
+  qmail_control:
+    url: infra/infrastructure/trunk/qmail/control
+    depth: empty
+    files:
+      - badrcptto
+      - badrcptto_patterns
+
+  site-board: # calendar.md(text) only; N.B. this is fetched during web-site build
+    url: asf/infrastructure/site/trunk/content/foundation/board
+    depth: skip
+
+  site-img:
+    url: asf/comdev/project-logos/originals
+    depth: delete
+    list: true
+
+  steve:
+    url: asf/steve/trunk
+
+  subreq: # for mail subscription requests
+    url: infra/infrastructure/trunk/subreq
+    depth: skip
+
+  tlpreq-input:
+    url: infra/infrastructure/trunk/tlpreq/input

@@ -1,0 +1,14 @@
+source 'https://rubygems.org'
+
+# lib needs these at run-time
+gem 'json'
+gem 'nokogiri'
+gem 'rake'
+gem 'ruby-ldap'
+gem 'wunderbar'
+gem 'pdf-reader'
+
+# For Travis testing
+group :test do
+  gem 'rspec'
+end

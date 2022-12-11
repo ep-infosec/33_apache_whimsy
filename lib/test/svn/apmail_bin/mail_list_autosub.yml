@@ -1,0 +1,35 @@
+# Partial listing - TBC
+# ASF committers can subscribe to these:
+:committers:
+- committers-cvs@apache.org
+- users@infra.apache.org
+- jobs@apache.org
+- party@apache.org
+- site-cvs@apache.org
+- site-dev@apache.org
+
+# In addition to the above, PMC chairs can subscribe:
+:chairs:
+- board@apache.org
+- board-commits@apache.org
+- board-chat@apache.org
+
+# In addition to the above, ASF members can subscribe:
+:members:
+- members@apache.org
+- press@apache.org
+
+# automatically maintained
+:intrinsic:
+- committers@apache.org
+- pmc-chairs@apache.org
+
+# not auto-subscribable
+:disallowed:
+- notallowed@apache.org
+
+:deprecated:
+- deltacloud-commits@apache.org
+- deltacloud-dev@apache.org
+- deltacloud-user@apache.org
+- shindig-users@apache.org
